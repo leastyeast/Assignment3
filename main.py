@@ -22,7 +22,7 @@ choice = int(input(">>> "))
 def check_password():
     password_input = input("Please enter your password: ")
     if password_input != "password":
-        print("Password is incorrect!")
+        return print("Password is incorrect!")
     elif password_input == "password":
         return None
 
@@ -30,17 +30,22 @@ def check_password():
 def register_vehicle():
     i = 0
     if i >= 50:
-        print("The parking lot has no spaces. PLease try again later")
+        print("The parking lot is full")
     elif i < 50:
         print("The parking lot has spaces")
-        plate_number = []
-        credit_card_number = []
+        if plate_number in plate_number:
+            print(f"{plate_number} is already registered")
+        else:
+            plate_number = []
+            credit_card_number = []
         
-        plate_number = input("Please input your plate number: ")
-        credit_card_number = input("Enter your Credit Card Number (4.00$ charge): ")
+            plate_number = input("Please input your plate number: ")
+            credit_card_number = input("Enter your Credit Card Number (4.00$ charge): ")
 
-        print(f"Thank you, your plate {plate_number} has been added to the lot.")
-
+            print(f"Thank you, your plate {plate_number} has been added to the lot.")
+    for plate_number in plate_number:
+        i + 1
+    
 #displaying vehicles
 def display_vehicles():
     pass
