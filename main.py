@@ -33,15 +33,16 @@ def register_vehicle():
         print("The parking lot is full")
     elif i < 50:
         print("The parking lot has spaces")
+        
+        plate_number = []
+        credit_card_number = []
+
+        plate_number = input("Please input your plate number: ")
+        credit_card_number = input("Enter your Credit Card Number (4.00$ charge): ")
+
         if plate_number in plate_number:
             print(f"{plate_number} is already registered")
         else:
-            plate_number = []
-            credit_card_number = []
-        
-            plate_number = input("Please input your plate number: ")
-            credit_card_number = input("Enter your Credit Card Number (4.00$ charge): ")
-
             print(f"Thank you, your plate {plate_number} has been added to the lot.")
     for plate_number in plate_number:
         i + 1
