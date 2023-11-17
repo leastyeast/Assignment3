@@ -20,12 +20,11 @@ choice = int(input(">>> "))
 
 #password check function
 def check_password():
-    password_input = input("Please enter your password: ").lower()
-    if password_input == "password":
+    password_input = input("Please enter your password: ")
+    if password_input != "password":
+        print("Password is incorrect!")
+    elif password_input == "password":
         return None
-    elif password_input != "password":
-        output = "Password is incorrect!"
-        return output
 
 #registering vehicles
 def register_vehicle():
@@ -39,7 +38,7 @@ def register_vehicle():
         
         plate_number = input("Please input your plate number: ")
         credit_card_number = input("Enter your Credit Card Number (4.00$ charge): ")
-        
+
         print(f"Thank you, your plate {plate_number} has been added to the lot.")
 
 #displaying vehicles
